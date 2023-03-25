@@ -1,7 +1,26 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+/*
+In this program, we start by setting a variable limit to the maximum number we want to
+check for prime numbers. In this case, we've set it to 20.
+ */
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main() {
+    val limit = 20
+    print("Prime numbers up to $limit: ")
+    for (i in 2..limit) {
+        if (isPrime(i)) {
+            print("$i ")
+        }
+    }
+}
+
+fun isPrime(number: Int): Boolean {
+    if (number <= 1) {
+        return false
+    }
+    for (i in 2 until number) {
+        if (number % i == 0) {
+            return false
+        }
+    }
+    return true
 }
