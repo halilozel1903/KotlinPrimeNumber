@@ -1,4 +1,4 @@
-/*
+/**
 In this program, we start by setting a variable limit to the maximum number we want to
 check for prime numbers. In this case, we've set it to 20.
  */
