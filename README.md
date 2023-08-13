@@ -44,7 +44,7 @@ Prime numbers up to 20: 2 3 5 7 11 13 17 19
 ```
 ## Donation 💸
 
-If this project help 💁 you, Can you give me a cup of coffee? ☕
+You can support by buying a coffee.  ☕
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/halilozel1903)
 
