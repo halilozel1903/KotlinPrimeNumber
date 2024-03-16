@@ -5,10 +5,7 @@ check for prime numbers. In this case, we've set it to 20.
 
 fun main() {
     val limit = 20
-    println("Prime numbers up to $limit: " + (2..limit).filter { isPrime(it) }.joinToString(" "))
+    println("Prime numbers up to $limit: ${(2..limit).filter { it.isPrime() }.joinToString(", ")}")
 }
 
-fun isPrime(number: Int): Boolean {
-    if (number <= 1) return false
-    return (2 until number).all { number % it != 0 }
-}
+fun Int.isPrime(): Boolean = this <= 1 || (2 until this).none { this % it == 0 }
