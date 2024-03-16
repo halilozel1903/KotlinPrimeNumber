@@ -9,25 +9,10 @@ Here's a simple program in `Kotlin` to find all prime numbers up to a given numb
 ```kotlin
 fun main() {
     val limit = 20
-    print("Prime numbers up to $limit: ")
-    for (i in 2..limit) {
-        if (isPrime(i)) {
-            print("$i ")
-        }
-    }
+    println("Prime numbers up to $limit: ${(2..limit).filter { it.isPrime() }.joinToString(", ")}")
 }
 
-fun isPrime(number: Int): Boolean {
-    if (number <= 1) {
-        return false
-    }
-    for (i in 2 until number) {
-        if (number % i == 0) {
-            return false
-        }
-    }
-    return true
-}
+fun Int.isPrime(): Boolean = this <= 1 || (2 until this).none { this % it == 0 }
 ```
 In this program, we start by setting a variable limit to the maximum number we want to check for prime numbers. In this case, we've set it to `20`.
 
